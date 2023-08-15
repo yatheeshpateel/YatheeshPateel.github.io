@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title> Yatheesh Pateel KG </title>
+    <title> Responsive Portfolio Website | CodingLab </title>
     <link rel="stylesheet" href="style.css">
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
@@ -24,7 +24,7 @@
           <li><a href="#about">Home</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Contact Us</a></li>
           
           <div class="cancel-btn">
             <i class="fas fa-times"></i>
@@ -178,72 +178,95 @@
           <img src="Images/download.jpg" alt="Project 1">
         </div>
         <div class="topic">Titanic Classification</div>
-        <p>This is a machine learning project that predicts whether a person would have survived the sinking of the Titanic based on their socio-economic status, age, gender, and more.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
       </a>
       <a href="https://github.com/yatheeshpateel/Insurance-Premium-Prediction" target="_blank" class="box">
         <div class="project-image">
           <img src="Images/health.jpg" alt="Project 2">
         </div>
         <div class="topic">Health Insurence Premium Prediction</div>
-        <p>This project aims to predict the insurance premium of individuals based on various factors such as age, gender, BMI, smoking habit, region, and number of children.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
       </a>
       <a href="https://github.com/yatheeshpateel/sales-prediction" target="_blank" class="box" class="box">
         <div class="project-image">
           <img src="Images/sale 1.jpg" alt="Project 3">
         </div>
         <div class="topic">Sales Forecast</div>
-        <p>This is a case study of predicting future sales using machine learning algorithms. The goal is to build a model that can predict the sales based on historical sales data.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
       </a>
       <a href="https://github.com/yatheeshpateel/spam-detection-using-ml" target="_blank" class="box" class="box">
         <div class="project-image">
           <img src="Images/spam.jpeg" alt="Project 3">
         </div>
         <div class="topic">Email Spam Detection</div>
-        <p>About This project is aimed at detecting spam messages using machine learning algorithms. .</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
       </a>
       <a href="https://github.com/yatheeshpateel/IRIS-FLOWER-CLASSIFICATION" target="_blank" class="box" class="box">
         <div class="project-image">
           <img src="Images/irirs flower.jpeg" alt="Project 3">
         </div>
         <div class="topic">Iris Flower Classification</div>
-        <p>This project aims to build a machine learning model that can classify the three species of Iris flowers based on their measurements. The three species are Setosa, Versicolor and Virginica.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
       </a>
       <a href="https://github.com/yatheeshpateel/create-qrcode-using-python" target="_blank" class="box" class="box">
         <div class="project-image">
           <img src="Images/qrcode.png" alt="Project 3">
         </div>
         <div class="topic">QR-Code Generator</div>
-        <p>About
-          Create a QR code generator using PYthon,this is a script to generate QR code using python.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quam odio, qui voluptatem eligendi?</p>
       </a>
       <!-- Add more project boxes as needed -->
     </div>
   </div>
 </section>
 
-<section id="contact" class="contact">
-  <div class="content">
-    <div class="text">
-      <h2>Contact Me</h2>
-      <p>Feel free to get in touch with me for any inquiries or collaboration opportunities.</p>
+<!-- Contact Section Start -->
+<section class="contact" id="contact">
+  <div class="content Us">
+    <div class="title"><span>Contact Us</span></div>
+
+    <div class="Contact Us">
+      <div class="text">Feel free to reach out to me using the form below:</div>
+      <form action=""name="contact-us">
+       <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email"name="email" id="email">
+       </div>
+       <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text"name="name" id="name">
+       </div>
+       <div class="form-group">
+        <label for="message">Message</label>
+      <textarea name="message" id="message" cols="30" rows="5"></textarea>
+       </div>
+       <button type="submit" class = "btn-submit ">submit </button>
+       
+       </form>
     </div>
-    <form action="#" method="POST">
-      <div class="form-group">
-        <input type="text" name="name" placeholder="Your Name" required>
-      </div>
-      <div class="form-group">
-        <input type="email" name="email" placeholder="Your Email" required>
-      </div>
-      <div class="form-group">
-        <textarea name="message" placeholder="Your Message" required></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit">Send Message</button>
-      </div>
-      
-    </form>
+   
   </div>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyc_42vXeQbYLWZ8u8fNU86uvdK8ymnJw0NEJeaWrVjSW2kWnJlHFnqTrFlvl7u6kz1/exec'
+    const form = document.forms['contact-us']
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+         form.reset()
+        alert("success,Thank you for contacting me! I'll get back to you soon")
+      })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+   
 </section>
+
+
+
+
+<!-- Contact Section End -->
 
 
 
@@ -258,5 +281,6 @@
 </footer>
 
   <script src="script.js"></script>
+  
 </body>
 </html>
